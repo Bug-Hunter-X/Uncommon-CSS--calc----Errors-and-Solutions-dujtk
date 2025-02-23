@@ -1,0 +1,17 @@
+To fix these issues, ensure that:
+
+1. **Parent element has an explicit width:**  Give the parent element a definite width (e.g., using `width: 500px;` or similar). This will provide a clear reference for the `100%` calculation in `calc()`. 
+
+2. **Correct spacing in `calc()` expressions:** Always add spaces around the operators within the `calc()` function. 
+
+```css
+.element {
+  width: calc(100% - 20px); /* Correct spacing */
+}
+
+.parent {
+  width: 500px; /* Explicit width for parent */
+}
+```
+
+By following these best practices, you can avoid unexpected behavior with the `calc()` function.

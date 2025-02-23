@@ -1,0 +1,9 @@
+The CSS property `calc()` is used incorrectly in the following code snippet:
+
+```css
+.element { width: calc(100% - 20px); }
+```
+
+While this looks correct, it can lead to unexpected results if the parent element's width is not defined or is automatically determined by the content.  If the parent doesn't have an explicitly set width, `100%` will be relative to the parent's auto-calculated width, leading to inaccurate calculations when subtracting `20px`. 
+
+Another common issue is forgetting to add spaces around the operators in `calc()` expressions. This might lead to parsing errors in some browsers.
